@@ -141,7 +141,6 @@ def display_results(items: list):
         print(f"{recipe_name}: {recipe_url} - weight needed: {ingredient_weight}")
 
 
-
 def run(user_input: str) -> None:
     """
     Search results
@@ -167,11 +166,11 @@ def convert_csv(recipes_list: list) -> None:
     df = pd.DataFrame.from_dict(recipes_list)
     df.to_csv("recipe.csv", index=False)
 
-# Ask the user to enter an ingredient to search for
-user_input = input("Enter an ingredient to search for a recipe: ")
-# user_input = "tofu"
+# Run from command line
+if __name__ == "__main__":
+    # Ask the user to enter an ingredient to search for
+    user_input = input("Enter an ingredient to search for a recipe: ")
+    # user_input = "tofu"
+    run(user_input)
 
-run(user_input)
 
-
-print("end")
