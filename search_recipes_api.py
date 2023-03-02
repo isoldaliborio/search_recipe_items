@@ -88,6 +88,9 @@ def search_recipes(ingredient: str, app_id: str, app_key: str) -> list:
 
 def get_ingredient_weight(recipe: dict, ingredient: str) -> float:
     # "ingredients" is a list of dictionaries inside of "recipe"
+    """ 
+    Get the rounded weight of an ingredient
+    """
     recipe_ingredients = recipe["recipe"]["ingredients"]
 
     # to access each ingredient I did a for loop.  
